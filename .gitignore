@@ -1,3 +1,8 @@
+# To ignore data uploads into repo 
+data/
+.DS_Store/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
