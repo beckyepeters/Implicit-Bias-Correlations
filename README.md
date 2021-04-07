@@ -27,3 +27,5 @@ Notes after 4.3 Saturday session
 - Get a one-on-one with Heather on Monday or Tuesday before class to make determinations about inferential statistics, hypothesis testing, or correlations. No -- Try to do correlations plots before you talk to her!! Get hyp testing ideas from her but she already told you correlation is a good one, so get that done first. 
 - Implicit - how do you name the unit of measurement? It's time but not really reaction time, they do stuff to it that I haven't read about in any of their studies... look more... 
 - 
+
+To clean each 
