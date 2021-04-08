@@ -28,4 +28,44 @@ Notes after 4.3 Saturday session
 - Implicit - how do you name the unit of measurement? It's time but not really reaction time, they do stuff to it that I haven't read about in any of their studies... look more... 
 - 
 
-To clean each 
+Loading Data: 
+1. Project Implicit zip file download.
+2. Unzip & Move files to appropriate folder (data / codebooks).
+3. Import with `pd.read_spss`.
+4. [Once I had the data loaded all I really did was waste some time cleaning in twenty different ways to make sure I'd done it right without really following my workflow at all... ]
+5. Clean data (see below) 
+6. Imports for Jup Ntbk: 
+```
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import pyreadstat
+    import glob
+    import seaborn as sns
+```
+
+Cleaning Specific Sections: 
+1. Create a renamed csv with most recent df to save work. 
+2. Make a copy of old df to save work. 
+    * `new_df = old_df.copy()`    
+3. Compare all columns with data for this section. 
+    * `df.col_name_1.count(), df.col_name_1.unique(), len(df.col_name_1.unique())`
+4. Create csv to visually compare columns. 
+    * `df[['col_name_1', 'col_name_2', 'etc']].to_csv('folder/csvname.csv')`
+5. Create a dictionary for any value replacements before merging. 
+    * `col_dict = {'bye': 'hello'}`
+    * Note to self: **Always include np.nan : 'Not Reported' in each section dictionary!!!**
+6. Choose a main column & fill it with vals from other columns. 
+    * `df.main_col.replace(to_replace=df_dict, inplace=True)`
+    * Repeat for number of columns in section (could probably make a function for this? But they're all so different...)
+    * Visual check with new csv
+7. Drop unnecessary columns 
+    * `df.drop(columns=['col_1', 'col_2'], inplace=True, axis=1)`
+8. Wrap it up
+    * Create csv with df
+    * Create copy of df for new section, rename. 
+
+BEFORE CORR: 
+CREATE NEW COLUMNS WITH STRING vs INT DATA FOR POLITICS, RELIGION, RACE, etc. 
+
+How many languages is the test in? Do all people take it in English? 
