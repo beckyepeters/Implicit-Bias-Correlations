@@ -1,10 +1,29 @@
 # Implicit Bias Correlations
 Capstone Project #1 for RPP2 Cohort of Galvanize Data Science Immersive Program - Correlations Between Types of Bias &amp; Changes Over Time
 
+## Background and Motivation
+The Implicit Association Test (IAT) from Harvard's Project Implicit captured my imagination when I read about it years ago in Shankar Vedantam's book, [Hidden Brain](https://www.amazon.com/Hidden-Brain-Unconscious-Presidents-Control/dp/0385525222). He speaks of it frequently in his podcast of the same name. I first took one of the tests about ten years ago and was surprised enough by my result to want to dive into the information further. There have been many papers written and studies performed using these publicly available data, all ranging in conclusions about the implications and urgencies suggested by the outcomes of these tests. While I do not believe that the binary categories presented in the test in any way represent the complexities of our intersectionality as humans, I am curious about the suggestion that our unconcious bias might be measured in some way. For this reason, I decided to explore the changes in the outcomes of these tests over time, from 2006 to 2020. Because I am still learning, most of my time was spent cleaning one test dataset, described below. 
 
-CLEANING DATA: 
+From [their website](implicit.harvard.edu): 
+"Project Implicit is a non-profit organization and international collaboration between researchers who are interested in implicit social cognition - thoughts and feelings outside of conscious awareness and control. The goal of the organization is to educate the public about hidden biases and to provide a “virtual laboratory” for collecting data on the Internet."
 
-Gender-Career IAT: 
+There are currently 14 tests on the website available in multiple languages. For the purpose of this project, the data described within comes solely from the Gender-Career IAT. 
+
+## Data 
+Data was downloaded from [Project Implicit's Demo Website](https://osf.io/y9hiq/), through .sav (SPSS) files saved alongside excel codebooks detailing the data. 
+
+**Table 1: Data Overview**
+| Descriptor | Detail | Notes |
+|---|---|---|
+| Total n in Dataset | 3,159,286 | 192 columns |
+| Total n in Cleaned Dataset | 1,016,675 | 14 columns |
+| Dependent Variable | Implicit Score | Range: -2 to 2 <br>(description below) |
+| Other Features | * Year of Test <br> * Explicit Score <br>  * Education Level <br> * Political Affiliation <br> * Religiosity <br> |
+
+------------
+
+### Cleaning the Data, Step by Step: 
+
 * Loaded .sav files into pandas dataframes & concatenated all 16 years of data (Starting n = 3,159,286) 
 *  Cleaned data to delete incomplete sessions or those missing key attitudes / variables for this specific project
     * Completed Tests = 1,627,738 (51.52% completion rate)
@@ -19,20 +38,17 @@ Gender-Career IAT:
             * Combined religion columns with different indicators; kept religious id as most relevant (not religious, a little religious, etc... instead of having specific denominations)
         * 
 
-Notes after 4.3 Saturday session 
+post saturday session: 
 - Wasted morning trying to use plotly, abandoned at noon 
 - Got some good plots from what I thought was clean data but then I saw a big dip in 2016 participation and am concerned about that
 - Also idea to demonstrate unchanging or stagnant or changing demographics among this population of people who take the test (seems always 70% female, does that carry for other tests or just the gender ones?, and also other parameters). 
-- US map to show changes over years would be cool, like a giphy kind that changes as you hover over it :) 
-- Get a one-on-one with Heather on Monday or Tuesday before class to make determinations about inferential statistics, hypothesis testing, or correlations. No -- Try to do correlations plots before you talk to her!! Get hyp testing ideas from her but she already told you correlation is a good one, so get that done first. 
-- Implicit - how do you name the unit of measurement? It's time but not really reaction time, they do stuff to it that I haven't read about in any of their studies... look more... 
-- 
+
 
 Loading Data: 
 1. Project Implicit zip file download.
 2. Unzip & Move files to appropriate folder (data / codebooks).
 3. Import with `pd.read_spss`.
-4. [Once I had the data loaded all I really did was waste some time cleaning in twenty different ways to make sure I'd done it right without really following my workflow at all... ]
+4. [Once I had the data loaded all I really did was waste some time cleaning in twenty different ways to make sure I'd done it right without really following my pre-defined workflow at all... ]
 5. Clean data (see below) 
 6. Imports for Jup Ntbk: 
 ```
@@ -42,6 +58,7 @@ Loading Data:
     import pyreadstat
     import glob
     import seaborn as sns
+    %matplotlib inline
 ```
 
 Cleaning Specific Sections: 
@@ -65,7 +82,20 @@ Cleaning Specific Sections:
     * Create csv with df
     * Create copy of df for new section, rename. 
 
-BEFORE CORR: 
-CREATE NEW COLUMNS WITH STRING vs INT DATA FOR POLITICS, RELIGION, RACE, etc. 
 
-How many languages is the test in? Do all people take it in English? 
+Gender-Career Test Offered in 14 languages: 
+![Languages](images/LanguagesOffered.png)
+
+
+| Max Implicit Measure | Min Implicit Measure | Mean Implicit Measure | 
+| ----------| ---------|--------| 
+| 1.83 | -1.87 | 0.36 |
+
+
+EDA: 
+
+![Implicit Scores Box & Whisker](images/ImplicitScoresbyYearBox&WhiskerPlot.png)
+ 
+
+## Future Work 
+* 
