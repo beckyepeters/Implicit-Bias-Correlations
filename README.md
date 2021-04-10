@@ -1,6 +1,8 @@
-# The Water We Swim In: <br> Examining Implicit Associations around Gender and Career 
-### [Becky Peters](github.com/beckyepeters), Capstone Project #1
-RPP2 Cohort of Galvanize Data Science Immersive Program
+# The Water We Swim In: <br> Examining Implicit Automatic Associations in the U.S. around Gender and Career 
+### Becky Peters, Capstone Project #1 <br>
+[LinkedIn](https://www.linkedin.com/in/beckyepeters/) | [Email](becky.e.peters@gmail.com) | [Github](github.com/beckyepeters) | 
+[Presentation Slides](https://docs.google.com/presentation/d/183CG2j3bzjTUv1gb6f4MwtwS8f7LzZLxqMQTvmRa0jc/edit?usp=sharing)<br>
+RPP2 Cohort of Galvanize Data Science Immersive Program <br>
 
 ## Background and Motivation
 The Implicit Association Test (IAT) from Harvard's Project Implicit captured my imagination when I read about it years ago in Shankar Vedantam's book, [Hidden Brain](https://www.amazon.com/Hidden-Brain-Unconscious-Presidents-Control/dp/0385525222). He speaks of it frequently in his podcast of the same name. I first took one of the tests about ten years ago and was surprised enough by my result to want to dive into the information further. There have been many papers written and studies performed using these publicly available data, all ranging in conclusions about the implications and urgencies suggested by the outcomes or even the relevance of these tests. 
@@ -101,7 +103,7 @@ Cleaning Specific Categories:
 ## Citations and References
 * Code-Specific: 
     * [Displaying values on bar graphs](https://stackoverflow.com/questions/43214978/seaborn-barplot-displaying-values)
-    * [Stacked Percent Bar Charts](https://chrisalbon.com/python/data_visualization/matplotlib_percentage_stacked_bar_plot/)
+    * [Stacked Percentage Bar Charts](https://chrisalbon.com/python/data_visualization/matplotlib_percentage_stacked_bar_plot/)
 * Dataset-Specific: 
     * [Project Implicit](https://implicit.harvard.edu/)
     * [Greenwald, Nosek, & Banaji, 2003: Cleaning IAT data for high errors](https://journals.sagepub.com/doi/full/10.1177/0146167218757454)
